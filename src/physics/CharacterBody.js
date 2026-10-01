@@ -1,13 +1,5 @@
 /**
  * CharacterBody.js — Kinematic player controller
- *
- * Uses Rapier CharacterController for robust ground detection,
- * slope handling and step climbing.
- *
- * Communication:
- *  - Receives desired velocity / jump from Prediction or local Input.
- *  - Writes final transform into GameState on every physics step.
- *  - Never reads input devices directly.
  */
 
 import RAPIER from '@dimforge/rapier3d-compat';
@@ -102,6 +94,11 @@ export class CharacterBody {
 
   setPosition(x, y, z) {
     this.body.setNextKinematicTranslation({ x, y, z });
+  }
+
+  setRotation(yaw, pitch) {
+    this.yaw = yaw;
+    this.pitch = pitch;
   }
 
   destroy() {
