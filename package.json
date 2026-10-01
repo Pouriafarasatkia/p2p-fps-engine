@@ -1,7 +1,7 @@
 {
   "name": "p2p-fps-engine",
-  "version": "1.0.0",
-  "description": "Highly modular 3D browser-based multiplayer FPS with P2P networking, Three.js, Rapier3D, and PeerJS",
+  "version": "1.1.0",
+  "description": "Stylized island multiplayer FPS — Three.js + Rapier3D + PeerJS. Beautiful Crossy-Road inspired graphics, bots, territory flags, real ballistics.",
   "type": "module",
   "scripts": {
     "dev": "vite",

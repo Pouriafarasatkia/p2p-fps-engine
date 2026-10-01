@@ -3,38 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>P2P FPS Engine</title>
+  <title>Island Shooting</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #0a0a0a;
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      width: 100%; height: 100%; overflow: hidden;
+      background: #0a1628; font-family: 'Segoe UI', system-ui, sans-serif;
     }
     #game-canvas {
-      display: block;
-      width: 100%;
-      height: 100%;
-      outline: none;
+      display: block; width: 100%; height: 100%; outline: none;
+      cursor: crosshair;
     }
     #ui-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 10;
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 10;
     }
-    #ui-overlay > * {
-      pointer-events: auto;
-    }
+    #ui-overlay > * { pointer-events: auto; }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
