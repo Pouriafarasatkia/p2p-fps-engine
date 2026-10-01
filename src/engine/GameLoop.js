@@ -1,22 +1,5 @@
 /**
  * GameLoop.js — Decoupled Fixed-Timestep Engine Loop
- *
- * Architecture:
- *  - Physics / logic run at a fixed rate (default 60 Hz).
- *  - Rendering runs as fast as the browser allows (requestAnimationFrame).
- *  - An accumulator + alpha interpolation factor is provided so renderers
- *    can smoothly interpolate between the previous and current physics state.
- *
- * Communication:
- *  - Emits on the shared bus:
- *      'engine:fixedUpdate'  → { dt: number }          (fixed timestep)
- *      'engine:render'       → { alpha: number, dt: number }  (variable)
- *      'engine:started'
- *      'engine:stopped'
- *  - Listens for:
- *      'engine:pause' / 'engine:resume'  (optional external control)
- *
- * No knowledge of physics, networking, or rendering — pure timing.
  */
 
 export class GameLoop {

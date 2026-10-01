@@ -1,10 +1,5 @@
 /**
  * WeaponConfigs.js — Data-driven weapon definitions
- *
- * All weapon stats live here. Systems (Ballistics, WeaponView, DamageSystem)
- * read from these objects; they never hard-code numbers.
- *
- * Units: SI where applicable (muzzleVelocity m/s, mass kg, etc.)
  */
 
 export const WeaponConfigs = Object.freeze({
@@ -24,17 +19,16 @@ export const WeaponConfigs = Object.freeze({
     fireMode: 'auto',
     fireRate: 650,
     magazineSize: 30,
-    reloadTime: 2.4,
+    reloadTime: 2.2,
     recoil: {
-      kickVertical: 0.018,
-      kickHorizontal: 0.006,
-      kickTranslational: 0.012,
-      recoverySpeed: 8.0,
+      kickVertical: 0.016,
+      kickHorizontal: 0.005,
+      kickTranslational: 0.01,
+      recoverySpeed: 9.0,
       pattern: 'climbing'
     },
-    model: 'weapons/ar.glb',
-    muzzleFlash: 'vfx/muzzle_flash',
-    tracerColor: 0xffaa00
+    tracerColor: 0xffaa00,
+    sound: 'rifle'
   },
   pistol: {
     id: 'pistol',
@@ -50,47 +44,18 @@ export const WeaponConfigs = Object.freeze({
     penetrationPower: 0.6,
     ricochetChance: 0.25,
     fireMode: 'semi',
-    fireRate: 320,
+    fireRate: 380,
     magazineSize: 15,
-    reloadTime: 1.6,
+    reloadTime: 1.5,
     recoil: {
-      kickVertical: 0.035,
-      kickHorizontal: 0.012,
-      kickTranslational: 0.02,
-      recoverySpeed: 10.0,
+      kickVertical: 0.03,
+      kickHorizontal: 0.01,
+      kickTranslational: 0.018,
+      recoverySpeed: 11.0,
       pattern: 'sharp'
     },
-    model: 'weapons/pistol.glb',
-    muzzleFlash: 'vfx/muzzle_flash',
-    tracerColor: 0xffee88
-  },
-  sniper: {
-    id: 'sniper',
-    name: 'Sniper Rifle',
-    muzzleVelocity: 850,
-    projectileMass: 0.012,
-    ballisticCoefficient: 0.45,
-    dragModel: 'G7',
-    caliber: 0.0086,
-    baseDamage: 95,
-    headshotMultiplier: 3.0,
-    limbMultiplier: 0.6,
-    penetrationPower: 2.5,
-    ricochetChance: 0.08,
-    fireMode: 'semi',
-    fireRate: 45,
-    magazineSize: 5,
-    reloadTime: 3.2,
-    recoil: {
-      kickVertical: 0.06,
-      kickHorizontal: 0.015,
-      kickTranslational: 0.04,
-      recoverySpeed: 4.5,
-      pattern: 'heavy'
-    },
-    model: 'weapons/sniper.glb',
-    muzzleFlash: 'vfx/muzzle_flash_large',
-    tracerColor: 0xff4400
+    tracerColor: 0xffee88,
+    sound: 'pistol'
   }
 });
 
